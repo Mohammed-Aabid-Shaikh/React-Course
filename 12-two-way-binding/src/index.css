@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(200, 255, 214);
+}
+
+.login-form{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input,button{
+  padding: 10px 10px;
+  margin: 10px;
+}
+
+button{
+  background-color: black;
+  color: white;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:hover{
+  transform: scale(1.07);
+  box-shadow: 4px 4px 10px rgb(90, 89, 89);
+}
