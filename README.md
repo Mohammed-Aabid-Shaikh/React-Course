@@ -26,6 +26,8 @@ A curated collection of mini React applications I built while progressing throug
 | `16-useeffect/` | Side-effect intro | `useEffect` with dependency array |
 | `17-gallery-project/` | Paginated gallery | Axios + pagination state + loading UI |
 | `ui-project/` | Landing page hero | Tailwind sections, props-driven testimonial cards |
+| `18-react-router-dom/` | Router fundamentals | BrowserRouter, `Link`, basic `<Routes>` setup |
+| `19-routing-advanced/` | Nested + dynamic routing | Route params, `<Outlet>`, programmatic navigation |
 
 ## Project Spotlights
 
@@ -71,6 +73,15 @@ A curated collection of mini React applications I built while progressing throug
 
 ### ui-project — Landing page hero
 - Tailwind-based hero/feature section with composable subcomponents (`Navbar`, `LeftContent`, `RightContent`) and prop-driven testimonial chips.
+
+### 18-react-router-dom — Router starter kit
+- Wraps the entire app in `<BrowserRouter>` and renders a shared `<Navbar />` with `Link` elements for Home, Product, About, and Contact, showcasing declarative navigation without reloads.
+- Defines a clean `<Routes>` tree with one component per page, making it a quick reference for wiring up top-level routes in a single file.
+
+### 19-routing-advanced — Nested & dynamic routing playground
+- Adds stacked navigation bars: a standard `<Navbar />` for global links plus a `useNavigate`-powered utility bar (`Navbar2`) with “Return”, “Back”, and “Next” buttons for programmatic navigation shortcuts.
+- Demonstrates nested routes under `/product` by pairing tab-like links with `<Outlet />`, rendering category pages (`Men`, `Women`, `Kids`) inline.
+- Shows dynamic routing with `/courses/:id`, where `useParams()` injects the course slug into the detail page, and finishes with a catch-all `NotFound` route to guard unmatched URLs.
 
 ## Getting Started
 
