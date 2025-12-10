@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: rgb(249, 201, 112);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: rgb(249, 201, 112);
+  color: black;
+}
+.nav h2 {
+  cursor: pointer;
+}
+
+.nav div {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav div a {
+  color: black;
+ font-weight: bold;
+  text-decoration: none;
+}
+
+.nav div a:hover {
+  color: white;
+}
