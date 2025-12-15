@@ -28,6 +28,8 @@ A curated collection of mini React applications I built while progressing throug
 | `ui-project/` | Landing page hero | Tailwind sections, props-driven testimonial cards |
 | `18-react-router-dom/` | Router fundamentals | BrowserRouter, `Link`, basic `<Routes>` setup |
 | `19-routing-advanced/` | Nested + dynamic routing | Route params, `<Outlet>`, programmatic navigation |
+| `20-bonus-topic/` | DOM manipulation basics | Direct DOM access, refs, theme switching without Context |
+| `21-context-api/` | Context API implementation | Global state management, theme provider pattern |
 
 ## Project Spotlights
 
@@ -82,6 +84,22 @@ A curated collection of mini React applications I built while progressing throug
 - Adds stacked navigation bars: a standard `<Navbar />` for global links plus a `useNavigate`-powered utility bar (`Navbar2`) with “Return”, “Back”, and “Next” buttons for programmatic navigation shortcuts.
 - Demonstrates nested routes under `/product` by pairing tab-like links with `<Outlet />`, rendering category pages (`Men`, `Women`, `Kids`) inline.
 - Shows dynamic routing with `/courses/:id`, where `useParams()` injects the course slug into the detail page, and finishes with a catch-all `NotFound` route to guard unmatched URLs.
+
+### 20-bonus-topic — Theme switching with prop drilling
+- Demonstrates basic theme switching functionality using traditional prop drilling pattern.
+- Shows how state (`Theme`) is managed in the parent `App` component and passed down to child components via props.
+- The `Navbar` component receives both the current theme and the `setTheme` function, allowing it to modify the global state.
+- Simple implementation that highlights the limitations of prop drilling when state needs to be accessed by deeply nested components.
+- Serves as a foundational example before introducing Context API for more elegant state management.
+
+### 21-context-api — Global state management with Context API
+- Implements a comprehensive theme switching system using React's Context API to eliminate prop drilling.
+- Creates a `ThemeContext` that provides `[theme, setTheme]` to all consuming components through the `ThemeData.Provider`.
+- Demonstrates the Provider pattern by wrapping the entire application in `ThemeContext` (via `main.jsx`).
+- Multiple components (`Navbar`, `Button`, `Nav2`) access theme state directly using `useContext(ThemeData)` without prop passing.
+- Shows conditional styling based on theme values and toggle functionality between 'light' and 'dark' modes.
+- Includes nested component consumption (`Nav2` within `Navbar`) to illustrate how context penetrates the component tree.
+- Serves as a practical example of when and how to use Context API for global state management in React applications.
 
 ## Getting Started
 
